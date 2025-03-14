@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/day.css') }}">
+{% endblock %}
+
+{% block body %}
+<h1>день №{{data['day']}}</h1>
+
+<h3>расход ресурсов</h3>
+<ul>
+    <li>единиц топлива расходуется: {{data['fuel']}}</li>
+    <li>единиц кислорода расходуется: {{data['o2']}}</li>
+</ul>
+
+
+<h3>раcпределение мощности реактора</h3>
+<ul>
+    <li>на двигатель: {{data['power_for_engine']}}%</li>
+    <li>на электроэнергию: {{data['power_for_electricity']}}%</li>
+</ul>
+
+
+<h3>данные по автоклаву</h3>
+<ul>
+    <li>T автоклава: {{data['T']}}</li>
+    <li>численность SH: {{data['sh']}}</li>
+</ul>
+
+{% endblock %}

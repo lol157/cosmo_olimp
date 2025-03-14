@@ -6,4 +6,11 @@
 
 {% block body %}
 <h1>по точкам</h1>
+
+<form method="post">
+    {% for waypoint in range(waypoints) %}
+        <button type="submit" name="waypoint" value="{{waypoint + 1}}">точка №{{waypoint + 1}}</button><br><br>
+    {% endfor %}
+</form>
+
 {% endblock %}
