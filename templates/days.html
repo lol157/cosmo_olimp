@@ -2,6 +2,7 @@
 
 {% block head %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/days.css') }}">
+{{ super() }}
 {% endblock %}
 
 {% block body %}
@@ -9,7 +10,7 @@
 
 <form method="post">
     {% for day in range(days) %}
-        <button type="submit" name="day" value="{{day + 1}}">день №{{day + 1}}</button><br><br>
+    <button type="submit" name="day" value="{{day + 1}}">день №{{day + 1}}</button><br><br>
     {% endfor %}
 </form>
 {% endblock %}

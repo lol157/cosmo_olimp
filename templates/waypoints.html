@@ -2,6 +2,7 @@
 
 {% block head %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/waypoints.css') }}">
+{{ super() }}
 {% endblock %}
 
 {% block body %}
@@ -9,7 +10,7 @@
 
 <form method="post">
     {% for waypoint in range(waypoints) %}
-        <button type="submit" name="waypoint" value="{{waypoint + 1}}">точка №{{waypoint + 1}}</button><br><br>
+    <button type="submit" name="waypoint" value="{{waypoint + 1}}">точка №{{waypoint + 1}}</button><br><br>
     {% endfor %}
 </form>
 

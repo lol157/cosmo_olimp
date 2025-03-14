@@ -1,23 +1,33 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        {% block head %}
-        {% endblock %}
-    </head>
 
-    <body>
-        <nav>
-            <a href="./">главная</a>
-            <a href="./input">ввод</a>
-            <a href="./waypoints">по точкам маршрута</a>
-            <a href="./days">по дням</a>
-        </nav>
+<head>
+    <meta charset="utf-8">
+    {% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    {% endblock %}
+</head>
 
+<body>
+    <header>
+        <div id="container">
+            <nav id="nav">
+                <a href="./">главная</a>
+                <a href="./input">ввод</a>
+                <a href="./waypoints">по точкам маршрута</a>
+                <a href="./days">по дням</a>
+            </nav>
+        </div>
+    </header>
+
+    <div id="body">
         {% block body %}
-            <h1>главная</h1>
-            <p>Кол-во дней на выполнение: {{days}}</p>
-            <p>Всего кредитов нужно перед стартом: {{credits}}</p>
+        <h1>главная</h1>
+        <p>Кол-во дней на выполнение: {{days}}</p>
+        <p>Всего кредитов нужно перед стартом: {{credits}}</p>
         {% endblock %}
-    </body>
+    </div>
+
+</body>
+
 </html>

@@ -2,16 +2,16 @@
 
 {% block head %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/input.css') }}">
+{{ super() }}
 {% endblock %}
 
 {% block body %}
 <h1>ввод</h1>
 
 <form method="post">
-    <input type="submit" value="по данным от api"><br/><br/>
-
-    <label>пользовательский ввод (формат [[s1, c1], [s2, c2], ...]):</label><br/>
-    <textarea name="user_input"></textarea><br/>
+    <input type="submit" value="по данным от api"><br /><br />
+    <label>пользовательский ввод (формат [[s1, c1], [s2, c2], ...]):</label><br />
+    <textarea name="user_input"></textarea><br />
     <input type="submit">
 </form>
 {% endblock %}

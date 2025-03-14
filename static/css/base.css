@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+header {
+    height: 4vh;
+    width: 100%;
+    background-color: rgb(221, 164, 164);
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 10vh;
+}
+
+p {
+    font-size: 2rem;
+    margin-bottom: 2vh;
+}
+
+#container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+#nav {
+    display: flex;
+    justify-content: space-evenly;
+    width: 30%;
+}
+
+#body {
+    display: flex;
+    min-height: 96vh;
+    margin-top: 25vh;
+    align-items: center;
+    flex-direction: column;
+}

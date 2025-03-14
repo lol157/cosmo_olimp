@@ -1,1 +1,17 @@
+#containers {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 0.5rem;
+    background-color: rgb(180, 180, 180);
+}
 
+h3 {
+    font-size: 2rem;
+    padding: 0.2rem;
+}
+
+li {
+    font-size: 1.5rem;
+    padding: 0.4rem;
+}
