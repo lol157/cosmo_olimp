@@ -10,5 +10,6 @@ if __name__ == '__main__':
         db.create_database()
 
         api_data = rc.get_path()
+        algorithm_res = solve_algorithm(api_data)
 
-        db.add_data(api_data)
+        db.add_data(algorithm_res)
